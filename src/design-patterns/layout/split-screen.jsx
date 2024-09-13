@@ -1,3 +1,4 @@
+// 'example of layout component in split screen'
 import { styled } from "styled-components";
 
 const Container = styled.div`
