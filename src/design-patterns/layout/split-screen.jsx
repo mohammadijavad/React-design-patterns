@@ -7,16 +7,13 @@ flex: 1;
 `
 
 
-
 export default function SplitScreen({Left,Right}){
     return <Container>
-
-    <Panel>
+        <Panel>
         <Left/>
-    </Panel>
-    <Panel>
+        </Panel>
+        <Panel>
         <Right/>
-    </Panel>
-
+        </Panel>
     </Container>
 }
