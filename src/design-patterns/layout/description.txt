@@ -1,0 +1,5 @@
+they focus on organizing other components within a web page.
+☑️uses in split screen, lists, modals.
+-the core content components of our pages, should be unaware
+and unconcerned about their precise location within the page structure.
+
