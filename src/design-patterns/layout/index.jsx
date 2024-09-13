@@ -1,10 +1,13 @@
 import SplitScreen from "./split-screen";
-const LeftSideComp=()=>{
-    return <h2 style={{background:'lime'}}> I am left</h2>
+const LeftSideComp = ({ title }) => {
+    return <h2 style={{ background: 'lime' }}> {title}</h2>
 }
- const RightSideComp=()=>{
-    return <h2 style={{background:'red'}}> I am right</h2>
+const RightSideComp = ({ title }) => {
+    return <h2 style={{ background: 'red' }}> {title}</h2>
 }
-export default function Layout(){
-    return  <SplitScreen Left={LeftSideComp} Right={RightSideComp}/>
+export default function Layout() {
+    return <SplitScreen>
+        <LeftSideComp title='I am left side' />
+        <RightSideComp title='Hey I am right side' />
+    </SplitScreen>
 }

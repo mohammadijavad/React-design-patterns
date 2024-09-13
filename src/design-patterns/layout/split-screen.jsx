@@ -1,19 +1,20 @@
-import {styled} from "styled-components";
+import { styled } from "styled-components";
 
-const Container=styled.div`
+const Container = styled.div`
 display: flex;`
-const Panel=styled.div`
-flex: 1;
-`
+const Panel = styled.div`
+flex: ${(p)=>p.flex};
+` 
 
 
-export default function SplitScreen({Left,Right}){
+export default function SplitScreen({ children,leftWidth=1,rightWidth=1}) {
+    const [left,right]=children
     return <Container>
-        <Panel>
-        <Left/>
+        <Panel flex={leftWidth}>
+            {left}
         </Panel>
-        <Panel>
-        <Right/>
+        <Panel flex={rightWidth}>
+            {right}
         </Panel>
     </Container>
 }
