@@ -10,3 +10,25 @@ they usually do not contain any styling either.
 ☑️Hooks
 In many cases, the Container/Presentational pattern can be replaced with React Hooks.
 The introduction of Hooks made it easy for developers to add statefulness without needing a container component to provide that state.
+
+ 
+ 
+ # Pros ☑️
+
+There are many benefits to using the Container/Presentational pattern.
+ 
+ - The Container/Presentational pattern encourages the separation of concerns. Presentational components can be pure functions which     are responsible for the UI, whereas container components are responsible for the state and data of the application. This makes it easy to enforce the separation of concerns.
+
+ - Presentational components are easily made reusable, as they simply display data without altering this data. We can reuse the presentational components throughout our application for different purposes.
+
+ - Since presentational components don’t alter the application logic, the appearance of presentational components can easily be altered by someone without knowledge of the codebase, for example a designer. If the presentational component was reused in many parts of the application, the change can be consistent throughout the app.
+
+- Testing presentational components is easy, as they are usually pure functions. We know what the components will render based on which data we pass, without having to mock a data store.
+
+
+# Cons ⚠️
+
+
+ - The Container/Presentational pattern makes it easy to separate application logic from rendering logic. However, Hooks make it possible to achieve the same result without having to use the Container/Presentational pattern, and without having to rewrite a stateless functional component into a class component.Note that today, we don’t need to create class components to use state anymore.
+
+ - Although we can still use the Container/Presentational pattern, even with React Hooks, this pattern can easily be an overkill in smaller sized application.
