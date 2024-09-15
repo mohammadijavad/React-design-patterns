@@ -1,5 +1,8 @@
-import Layout from "./design-patterns/layout";
 
 export default function App(){
-  return <Layout/>
+  return (
+    <div>
+      <h2>React.js concepts like design patterns, hooks, performace</h2>
+    </div>
+  )
 }
