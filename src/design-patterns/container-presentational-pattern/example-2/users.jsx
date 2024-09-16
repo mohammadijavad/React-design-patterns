@@ -1,6 +1,8 @@
 export default function Users({user}){
-    return <div>
-        <h2>{user?.name}</h2>
-        <p>{user?.email}</p>
+    return <div className='example'>
+        <h3>uer name :{user?.name}</h3>
+        <p className='intro'>user email:{user?.email}</p>
+        <p className='intro'>user phone number:{user?.phone}</p>
+        <p className='intro'>user website:{user?.website}</p>
     </div>
 }

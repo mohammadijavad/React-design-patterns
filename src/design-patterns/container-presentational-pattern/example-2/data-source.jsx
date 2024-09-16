@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-export const DataSource = ({ getData = () => {}, resourceName, children }) => {
+export default function  DataSource  ({ getData = () => {}, resourceName, children }) {
     const [resource, setResource] = useState(null);
 
     useEffect(() => {
