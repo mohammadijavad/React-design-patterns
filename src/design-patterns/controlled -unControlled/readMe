@@ -1,0 +1,23 @@
+# A controlled component  ☑️
+ is a form element whose value is fully controlled by React state. The value of the input is kept in the component's state and is updated through React's setState (or useState for functional components).
+This means the form's data flows from React state to the form field and back, giving React full control over the form elements.
+
+# B Uncontrolled Components ☑️
+An uncontrolled component is a form element where the input's value is handled by the DOM itself (not React state). Instead of controlling the value through React state, you access the value when needed (e.g., upon form submission) using ref to get the current value from the DOM.
+
+# When to Use ✅
+🎫Controlled components are better suited for cases where you need real-time validation, conditional rendering, or the form's state needs to be synchronized with other elements.
+🎫Uncontrolled components are useful when you just need to grab the form data at the end (e.g., on form submission) without handling every change.
+
+
+👨‍💻Feature                             🍭Controlled Components	                                                 🍭 Uncontrolled Components
+                                            
+Data Storage	                       React's state	                                                            DOM (via ref)
+ 
+Form Data Handling                    Controlled through onChange and state updates                                 Direct access via ref when needed
+
+State Management	                  React is always in sync with the form's data	                                React accesses the data only when required
+
+Usage                                 Suitable for advanced form handling, validation, and logic                    Suitable for simple forms with minimal logic
+
+Performance                           May require more updates and renders	                                        Usually more performant for large forms
