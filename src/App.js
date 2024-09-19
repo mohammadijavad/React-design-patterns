@@ -1,3 +1,4 @@
+import ContainerRenderProps from "./design-patterns/container-presentational-pattern/example-2/container-render-props";
 
 export default function App(){
   return (

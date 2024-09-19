@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-export default function  DataSource  ({ getData = () => {}, resourceName, children }) {
+export default function  DataSource  ({ getData = () => {},render  }) {
     const [resource, setResource] = useState(null);
 
     useEffect(() => {
@@ -11,14 +11,5 @@ export default function  DataSource  ({ getData = () => {}, resourceName, childr
         })();
     }, [getData]);
 
-    return (
-        <>
-            {React.Children.map(children, (child) => {
-                if (React.isValidElement(child)) {
-                    return React.cloneElement(child, { [resourceName]: resource });
-                }
-                return child;
-            })}
-        </>
-    );
+    return render(resource)
 };
