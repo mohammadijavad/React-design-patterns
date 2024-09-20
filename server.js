@@ -1,8 +1,10 @@
 const express = require("express");
 
 const app = express();
+const cors = require("cors");
 
 app.use(express.json());
+app.use(cors());
 
 let currentUser = {
   id: "1",
@@ -14,11 +16,15 @@ let currentUser = {
 
 let users = [
   {
-    id: "1",
+    id: 1,
     name: "Sarah Waters",
     age: 55,
     country: "United Kingdom",
     books: ["Fingersmith", "The Night Watch"],
+    username: "Bret",
+    email: "Sincere@april.biz",
+    phone: "1-770-736-8031 x56442",
+    website: "hildegard.org",
   },
   {
     id: "2",
@@ -26,6 +32,10 @@ let users = [
     age: 71,
     country: "Japan",
     books: ["Norwegian Wood", "Kafka on the Shore"],
+    username: "Antonette",
+    email: "Shanna@melissa.tv",
+    phone: "010-692-6593 x09125",
+    website: "anastasia.net",
   },
   {
     id: "3",
@@ -33,6 +43,10 @@ let users = [
     age: 43,
     country: "Nigeria",
     books: ["Half of a Yellow Sun", "Americanah"],
+    username: "Samantha",
+    email: "Nathan@yesenia.net",
+    phone: "1-463-123-4447",
+    website: "ramiro.info",
   },
 ];
 
@@ -87,5 +101,5 @@ app.get("/books/:id", (req, res) => {
 
 let SERVER_PORT = 9090;
 app.listen(SERVER_PORT, () =>
-  console.log(`Server is listening on port: ${SERVER_PORT}`)
+  console.log(`Server is listening on port: ${SERVER_PORT}`),
 );
