@@ -1,4 +1,5 @@
-export default function Users({user}){
+export default function User({user}){
+    console.log(user)
     return <div className='example'>
         <h3>uer name :{user?.name}</h3>
         <p className='intro'>user email:{user?.email}</p>
