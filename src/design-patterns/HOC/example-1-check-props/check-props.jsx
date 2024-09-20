@@ -1,5 +1,5 @@
-export default function checkProps(Component){
-return (props)=> {
-    console.log(props)
-    return <Component {...props} />}
+export default function checkProps(Component) {
+  return (props) => {
+    return <Component {...props} />;
+  };
 }
